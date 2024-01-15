@@ -70,12 +70,12 @@ nav li a {
 
 main {
   max-width: 1440px;
-  margin: 70px auto;
 }
 /* team section  */
 .team-container {
   display: flex;
   align-items: center;
+ margin: 100px;
 }
 .team-imgs {
   display: grid;
@@ -100,10 +100,79 @@ main {
   font-weight: 700;
   font-size: 2.8rem;
 }
+.team-description {
+  color: #727272;
+}
 /* team section end */
+/* fact section start */
+.facts{
+margin-left: 120px;
+}
+.fact-title {
+  color: #131313;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.fact-description {
+  color: #727272;
+  font-weight: 400;
+}
+.card-container{
+display: flex;
+justify-content: space-around;
+
+}
+.card{
+  border-radius: 8px;
+border: 1px solid #FF900E;
+text-align: center;  
+padding: 30px;
+margin-top: 100px;
+}
+.card-stats{
+  color: #424242;
+  font-size: 2.8rem;
+font-weight: 600;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+.card-title{
+  color: #727272;
+  font-size: 1.25rem;
+font-weight: 600;
+margin-top: 5px;}
+/* fact section end */
+
 /* main end */
 /* small device */
 @media screen and (max-width: 576px) {
+  header {
+    padding: 20px;
+  }
+  nav,
+  .team-container,.card-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .team-imgs {
+    grid-template-columns: 1fr;
+  }
+  .team-content {
+    padding: 20px;
+  }
+.card-container{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.fact-title{
+    text-align: center
+  }
+ 
+}
+/* medium device */
+@media screen and (min-width: 576px) and (max-width: 960px) {
   header {
     padding: 20px;
   }
@@ -112,23 +181,12 @@ main {
     flex-direction: column;
     gap: 20px;
   }
- 
-  .team-imgs {
-    grid-template-columns: 1fr;
-  }
-  .team-content{
-    padding: 20px;
-  }
 }
-/* medium device */
-@media screen and (min-width: 576px) and (max-width: 960px) {
-  header {
-    padding: 20px;
-  }
-  nav,.team-container {
-    flex-direction: column;
-    gap: 20px;
-  }
-}.team-content{
-    padding: 20px;
-  }
+.team-content {
+  padding: 20px;
+}
+.facts{
+  margin: 0;
+}
+.card-container{
+gap: 10px;}
